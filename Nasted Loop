@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Nested8 {
+
+	public static void main(String[] args) {
+	Scanner input=new Scanner(System.in);
+	System.out.println("Enter the row Number:");
+	int row=input.nextInt();
+	int n=(row*2);
+	for(int i=0;i<row;i++){
+		for(int j=0;j<n;j++){
+			if(j==row-i||j==row+i){
+				System.out.print("*");
+			}
+			else{
+				System.out.print(" ");
+			}
+			if(i==row-1){
+				for(i=0;i<row;i++){
+				System.out.print("* ");
+			}
+				if(i==row){
+					break;
+				}
+			}
+			
+		}
+		System.out.println();
+	}
+
+	}
+
+}

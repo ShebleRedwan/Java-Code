@@ -1,0 +1,40 @@
+import java.util.Scanner; 
+import java.util.Random;
+class Disc {
+	static Scanner scanner=new Scanner(System.in);
+	public static void main(String args[]){
+		System.out.println("***********My Casino***************");
+		casino();
+	}
+		public static void casino(){
+		int i,j,number=0;
+		int count=0;
+		int []winner=new int[20];
+		Random Disc=new Random();
+		System.out.print("How many player:");
+		int player=scanner.nextInt();
+		System.out.print("Bet per player:");
+		int Bet=scanner.nextInt();
+		int total=player*Bet;
+		System.out.println("Price of borad:"+total);
+		for(i=0;i<player;i++){
+			number=1+Disc.nextInt(6);
+			System.out.println("Player:["+i+"]"+number);
+			if (number==6){
+				winner[i]=number;
+				count++;
+			}
+		}
+		int Again=0;
+		for(j=0;j<player;j++){
+			if(winner[j]==6){	
+			System.out.println("winner["+j+"]\nprice:"+total/count);
+			Again=1;
+			}
+		}
+		if(Again==0){
+			System.out.println("No One Win Play Againg");
+			casino();
+		}
+		}
+		}

@@ -1,0 +1,29 @@
+
+package Sports;
+
+import java.util.Scanner;
+
+public class JavaLabTest {
+
+   
+    public static void main(String[] args) {
+        Scanner input=new Scanner (System.in);
+        System.out.println("Enter the name:");
+        String name=input.nextLine();
+         System.out.println("Enter the id:");
+         int id=input.nextInt();
+          System.out.println("Enter the dilay Salary:");
+          double salary=input.nextDouble();
+          SelsMan one=new SelsMan(id,name,salary);
+          one.Dispaly();
+          one.MonthlySalary();
+          System.out.println("Product you sell:");
+          int number_of_product=input.nextInt();
+         double MyBnous= one.Bnous(number_of_product);
+         System.out.print("Bnous"+MyBnous);
+          
+          
+          
+    }
+    
+}

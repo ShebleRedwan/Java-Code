@@ -1,0 +1,36 @@
+
+package Sports;
+
+public class SelsMan {
+  public  int id;
+   public String name;
+    public double salary;
+  public  double bnous;
+    int number_of_product;
+     public SelsMan(int id, String name,double salary){
+         this.id=id;
+         this.name=name;
+         this.salary=salary;
+         
+     }
+     public double MonthlySalary(){
+         System.out.println("MonthlySalary"+(salary*30));
+         return salary;
+     }
+     public double Bnous(int number_of_product){
+         if(number_of_product>100){
+             bnous=500;
+        }
+         return bnous;
+     }
+     
+
+ 
+    public void Dispaly(){
+        System.out.println("Name\t"+name);
+         System.out.println("Id\t"+id);
+          System.out.println("Daily Salary\t"+salary);
+     }
+
+
+}
